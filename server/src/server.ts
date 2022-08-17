@@ -1,5 +1,10 @@
 import express from "express";
-import { getAllObjects, postObject } from "./api.controller";
+import {
+  getAllObjects,
+  getObjectById,
+  postObject,
+  deleteAllObjects,
+} from "./api.controller";
 
 const app = express();
 app.use(express.json());
@@ -14,6 +19,8 @@ interface BoardGame {
 }
 
 app.get("/api", getAllObjects);
+app.get("/api/:id", getObjectById);
 app.post("/api", postObject);
+app.delete("/api", deleteAllObjects);
 
-app.listen(3000, () => console.log("Running on http://localhost3000"));
+app.listen(3000, () => console.log("Running on http://localhost:3000"));

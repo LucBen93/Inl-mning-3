@@ -1,5 +1,8 @@
-### Get all object
+### Get all objects
 GET http://localhost:3000/api
+
+### Get object by id
+GET http://localhost:3000/api/1
 
 ### Post an object
 POST http://localhost:3000/api
@@ -11,3 +14,6 @@ Content-Type: application/json
   "description": "Escape the aliens",
   "published": 1993
 }
+
+### Delete all objects
+DELETE http://localhost:3000/api
