@@ -23,7 +23,9 @@ export const postObject = (req: Request, res: Response) => {
 };
 
 export function deleteAllObjects(req: Request, res: Response) {
-  res.status(200).json(boardGames.splice(0, boardGames.length));
+  if (boardGames.length < 1) {
+    res.status(404).json("You cannot delete what is already deleted");
+  } else res.status(200).json(boardGames.splice(0, boardGames.length));
 }
 
 export function updateObject(req: Request, res: Response) {
