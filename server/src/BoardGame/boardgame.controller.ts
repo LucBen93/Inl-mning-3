@@ -1,13 +1,5 @@
 import { Request, Response } from "express";
-
-const boardGames: BoardGame[] = [];
-
-interface BoardGame {
-  id: string;
-  name: string;
-  description: string;
-  published: number;
-}
+import { boardGames } from "./boardgame.model";
 
 export function getAllObjects(req: Request, res: Response) {
   if (boardGames.length < 1) {

@@ -1,11 +1,11 @@
 ### Get all objects
-GET http://localhost:3000/api
+GET http://localhost:3000/api/boardgame
 
 ### Get object by id
-GET http://localhost:3000/api/1
+GET http://localhost:3000/api/boardgame/1
 
 ### Post an object
-POST http://localhost:3000/api
+POST http://localhost:3000/api/boardgame
 Content-Type: application/json
 
 {
@@ -16,7 +16,7 @@ Content-Type: application/json
 }
 
 ### Update board game
-PUT http://localhost:3000/api/1
+PUT http://localhost:3000/api/boardgame/1
 Content-Type: application/json
 
 {
@@ -25,6 +25,5 @@ Content-Type: application/json
   "published": 1999
 }
 
-
 ### Delete all objects
-DELETE http://localhost:3000/api
+DELETE http://localhost:3000/api/boardgame
