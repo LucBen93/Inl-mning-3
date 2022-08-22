@@ -10,7 +10,9 @@ interface BoardGame {
 }
 
 export function getAllObjects(req: Request, res: Response) {
-  res.status(200).json(boardGames);
+  if (boardGames.length < 1) {
+    res.status(404).json("Nah, man. This be empty");
+  } else res.status(200).json(boardGames);
 }
 
 export function getObjectById(req: Request, res: Response) {
@@ -18,7 +20,7 @@ export function getObjectById(req: Request, res: Response) {
   if (boardGame) {
     res.status(200).json(boardGame);
   } else {
-    res.status(204).json("Not found");
+    res.status(404).json("Not found");
   }
 }
 
@@ -39,5 +41,5 @@ export function updateObject(req: Request, res: Response) {
     const boardGameIndex = boardGames.indexOf(boardGame);
     boardGames[boardGameIndex] = { id, ...req.body };
     res.status(200).json(boardGames[boardGameIndex]);
-  } else res.status(204).json("Board game not found");
+  } else res.status(404).json("Board game not found");
 }
