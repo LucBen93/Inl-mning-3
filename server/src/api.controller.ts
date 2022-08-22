@@ -1,5 +1,13 @@
 import { Request, Response } from "express";
-import { boardGames } from "./server";
+
+const boardGames: BoardGame[] = [];
+
+interface BoardGame {
+  id: string;
+  name: string;
+  description: string;
+  published: number;
+}
 
 export function getAllObjects(req: Request, res: Response) {
   res.status(200).json(boardGames);
@@ -22,4 +30,14 @@ export const postObject = (req: Request, res: Response) => {
 
 export function deleteAllObjects(req: Request, res: Response) {
   res.status(200).json(boardGames.splice(0, boardGames.length));
+}
+
+export function updateObject(req: Request, res: Response) {
+  const id = req.params.id;
+  const boardGame = boardGames.find((x) => x.id === id);
+  if (boardGame) {
+    const boardGameIndex = boardGames.indexOf(boardGame);
+    boardGames[boardGameIndex] = { id, ...req.body };
+    res.status(200).json(boardGames[boardGameIndex]);
+  } else res.status(204).json("Board game not found");
 }

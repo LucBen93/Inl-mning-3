@@ -15,5 +15,16 @@ Content-Type: application/json
   "published": 1993
 }
 
+### Update board game
+PUT http://localhost:3000/api/1
+Content-Type: application/json
+
+{
+  "name": "Aureema",
+  "description": "Escape the aliens",
+  "published": 1999
+}
+
+
 ### Delete all objects
 DELETE http://localhost:3000/api
