@@ -12,17 +12,17 @@ $ cd server
 $ npm install
 ```
 
-## Build and run
-
-```
-$ tsc
-$ npm run start
-```
-
 ## Run in developer phase
 
 ```
 $ npm run dev
+```
+
+## Build and run in production phase
+
+```
+$ tsc
+$ npm run start
 ```
 
 Board game express API runs on `localhost:3000` on default.
