@@ -35,7 +35,7 @@ Retrieves all objects.
 
 ### `GET <host>/api/boardgame/<id>`
 
-Retrieves a specifik object by their id.
+Retrieves specifik objects by their id.
 
 ### `POST <host>/api/boardgame`
 
