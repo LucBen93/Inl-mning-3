@@ -8,7 +8,7 @@ You need to have `Node.js` installed on your computer
 
 ```
 $ git clone https://github.com/pollyyllop/Inl-mning-3.git
-$ cd .\server\
+$ cd server
 $ npm install
 ```
 
