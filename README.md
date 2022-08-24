@@ -4,7 +4,7 @@
 
 ## Setup
 
-You need to have `Node` installed on your computer
+You need to have `Node.js` installed on your computer
 
 ```
 $ git clone https://github.com/pollyyllop/Inl-mning-3.git
