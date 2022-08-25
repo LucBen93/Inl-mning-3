@@ -20,7 +20,7 @@ PUT http://localhost:3000/api/boardgame/1
 Content-Type: application/json
 
 {
-  "name": "Aureema",
+  "name": "Benjaminson",
   "description": "Escape the aliens",
   "published": 1999
 }
