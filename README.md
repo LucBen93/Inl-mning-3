@@ -2,13 +2,24 @@
 
 #### Inlämning 3- Server Express Node TS
 
-## Setup
+An applikation for getting, posting, updating and deleting an object I've created using different API endpoints.
+
+## Server setup
 
 You need to have `Node.js` installed on your computer
 
 ```
 $ git clone https://github.com/pollyyllop/Inl-mning-3.git
 $ cd server
+$ npm install
+```
+
+## Server setup
+
+You need to have `Node.js` installed on your computer
+
+```
+$ cd client
 $ npm install
 ```
 
@@ -64,7 +75,7 @@ Deletes ALL objects.
 - [x] API'et ska svara med 404 om datan saknas.
 - [x] Git & GitHub har använts
 - [x] Projektmappen innehåller en README.md fil
-- [ ] Uppgiften lämnas in i tid
+- [x] Uppgiften lämnas in i tid
 
 ## Krav för väl godkänt
 

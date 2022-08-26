@@ -25,5 +25,8 @@ Content-Type: application/json
   "published": 1999
 }
 
+### Delete a specifik object
+DELETE http://localhost:3000/api/boardgame/1
+
 ### Delete all objects
 DELETE http://localhost:3000/api/boardgame
