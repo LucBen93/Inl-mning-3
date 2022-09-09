@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
-import { boardGames } from "./boardgame.model";
+import { nanoid } from "nanoid";
+import { BoardGame, boardGames } from "./boardgame.model";
 
 export function getAllObjects(req: Request, res: Response) {
   if (boardGames.length < 1) {
@@ -17,9 +18,14 @@ export function getObjectById(req: Request, res: Response) {
 }
 
 export const postObject = (req: Request, res: Response) => {
-  const data = req.body;
-  res.status(200).json(data);
-  boardGames.push(data);
+  let boardGame: BoardGame = {
+    id: nanoid(20),
+    name: req.body.name,
+    description: req.body.description,
+    published: req.body.published,
+  };
+  boardGames.push(boardGame);
+  res.status(200).json(boardGame);
 };
 
 export function deleteAllObjects(req: Request, res: Response) {

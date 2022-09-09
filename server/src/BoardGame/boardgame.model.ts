@@ -1,6 +1,6 @@
 export const boardGames: BoardGame[] = [];
 
-interface BoardGame {
+export interface BoardGame {
   id: string;
   name: string;
   description: string;

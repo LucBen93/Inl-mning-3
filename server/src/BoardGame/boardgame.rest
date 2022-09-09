@@ -9,7 +9,6 @@ POST http://localhost:3000/api/boardgame
 Content-Type: application/json
 
 {
-  "id": "1",
   "name": "Nemesis",
   "description": "Escape the aliens",
   "published": 1993
